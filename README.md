@@ -5,7 +5,7 @@ index.html – główny plik strony,
 
 style.css – stylowanie aplikacji,
 
-pytania.js – baza 50 pytań do quizu,
+pytania.js – baza 58 pytań do quizu,
 
 main.js – logika quizu,
 
