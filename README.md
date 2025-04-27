@@ -1,5 +1,23 @@
 Live: https://jaszczurex.github.io/Karta-W-dkarska/
 
+🎣 Karta Wędkarska - Quiz
+Prosty quiz przygotowujący do zdania egzaminu na kartę wędkarską PZW.
+Aplikacja stworzona w czystym HTML, CSS i JavaScript.
+
+📋 Opis projektu
+Aplikacja wyświetla losowo pytania dotyczące:
+
+przepisów wędkarskich,
+
+wymiarów ochronnych,
+
+okresów ochronnych,
+
+etyki i obowiązków wędkarza.
+
+Każde pytanie ma 3 możliwe odpowiedzi — tylko jedna z nich jest poprawna.
+Na końcu quizu użytkownik otrzymuje wynik.
+
 📂 Struktura plików
 index.html – główny plik strony,
 
