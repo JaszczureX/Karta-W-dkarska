@@ -1,4 +1,3 @@
-
 let questionsShuffled = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -21,37 +20,41 @@ function loadQuestion() {
   });
 }
 
+function showTemporaryMessage(message, isCorrect) {
+  questionBox.innerHTML = message;
+  answerBoxes.forEach((box) => (box.onclick = null));
+
+  setTimeout(
+    () => {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questionsShuffled.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    },
+    isCorrect ? 1000 : 2500
+  );
+}
+
 function selectAnswer(selectedAnswer) {
   const currentQuestion = questionsShuffled[currentQuestionIndex];
   const correctAnswer = currentQuestion.correctAnswer;
 
   if (selectedAnswer === correctAnswer) {
     score++;
-    scoreBox.innerHTML = `<b>Wynik: ${score}</b>`;
-    showTemporaryMessage("✅ Dobra odpowiedź!");
+    scoreBox.innerHTML = `<b>Wynik: ${score} / ${questions.length}</b>`;
+    showTemporaryMessage("✅ Dobra odpowiedź!", true);
   } else {
-    showTemporaryMessage(`❌ Zła odpowiedź! Poprawna: ${correctAnswer}`);
+    showTemporaryMessage(`❌ Zła odpowiedź! Poprawna: ${correctAnswer}`, false);
   }
 }
 
-function showTemporaryMessage(message) {
-  questionBox.innerHTML = message;
-
-  answerBoxes.forEach((box) => (box.onclick = null));
-
-  setTimeout(() => {
-    currentQuestionIndex++;
-
-    if (currentQuestionIndex < questionsShuffled.length) {
-      loadQuestion();
-    } else {
-      showResult();
-    }
-  }, 1000);
-}
-
 function showResult() {
-  questionBox.innerHTML = `🎉 Koniec quizu! Twój wynik: ${score} / ${questionsShuffled.length}`;
+  const percentage = (score / questionsShuffled.length) * 100;
+  questionBox.innerHTML = `🎉 Koniec quizu! Twój wynik: ${score} / ${
+    questionsShuffled.length
+  } (${percentage.toFixed(2)}%)`;
   answerBoxes.forEach((box) => {
     box.style.display = "none";
   });
