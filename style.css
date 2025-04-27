@@ -7,72 +7,294 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 450px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .question-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background: #023e8a;
+    color: white;
+    content: "Karta Wędkarska";
+  }
+
+  h1 img {
+    display: none;
+  }
+
+  .score {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .question-box {
+    height: 65%;
+    text-align: center;
+  }
+
+  .question-box img {
+    width: 100%;
+    height: 30%;
+  }
+
+  .answer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+  }
+
+  .answer-box div {
+    height: 80%;
+    width: 30%;
+    transition: 0.1s;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #023e8a;
+    color: white;
+  }
+
+  .answer-box div:active {
+    scale: 0.9;
+  }
 }
 
-.container {
-  height: 100%;
-  width: 100%;
+@media (max-width: 786px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .question-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background: #023e8a;
+    color: white;
+  }
+
+  h1 img {
+    width: 20%;
+    height: 75%;
+    border-radius: 10%;
+  }
+
+  .score {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .question-box {
+    height: 65%;
+    text-align: center;
+  }
+
+  .answer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+  }
+
+  .answer-box div {
+    height: 80%;
+    width: 30%;
+    transition: 0.1s;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #023e8a;
+    color: white;
+  }
+
+  .answer-box div:active {
+    scale: 0.9;
+  }
 }
 
-.question-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 1200px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .question-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background: #023e8a;
+    color: white;
+  }
+
+  h1 img {
+    width: 20%;
+    height: 75%;
+    border-radius: 10%;
+  }
+
+  .score {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .question-box {
+    height: 65%;
+    text-align: center;
+  }
+
+  .answer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+  }
+
+  .answer-box div {
+    height: 80%;
+    width: 30%;
+    transition: 0.1s;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #023e8a;
+    color: white;
+  }
+
+  .answer-box div:active {
+    scale: 0.9;
+  }
 }
 
-h1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 10%;
-  background: #023e8a;
-  color: white;
-}
+@media (min-width: 1201px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-h1 img {
-  width: 20%;
-  height: 75%;
-  border-radius: 10%;
-}
+  .container {
+    height: 100%;
+    width: 50%;
+  }
 
-.score {
-  height: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .question-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.question-box {
-  height: 65%;
-  text-align: center;
-}
+  h1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background: #023e8a;
+    color: white;
+  }
 
-.answer-box {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 20%;
-  width: 100%;
-}
+  h1 img {
+    width: 20%;
+    height: 75%;
+    border-radius: 10%;
+  }
 
-.answer-box div {
-  height: 80%;
-  width: 30%;
-  transition: 0.1s;
-  border-radius: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: #023e8a;
-  color: white;
-}
+  .score {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.answer-box div:active {
-  scale: 0.9;
+  .question-box {
+    height: 65%;
+    text-align: center;
+  }
+
+  .answer-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+  }
+
+  .answer-box div {
+    height: 80%;
+    width: 30%;
+    transition: 0.1s;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #023e8a;
+    color: white;
+  }
+
+  .answer-box div:active {
+    scale: 0.9;
+  }
 }
