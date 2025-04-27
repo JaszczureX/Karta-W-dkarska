@@ -1,15 +1,18 @@
-// main.js
 
+let questionsShuffled = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Pobieramy elementy
 const questionBox = document.querySelector(".question-box");
 const answerBoxes = document.querySelectorAll(".answer-box .box");
+const scoreBox = document.querySelector(".score");
 
-// Funkcja do załadowania pytania
+function shuffleQuestions() {
+  questionsShuffled = [...questions].sort(() => Math.random() - 0.5);
+}
+
 function loadQuestion() {
-  const currentQuestion = questions[currentQuestionIndex];
+  const currentQuestion = questionsShuffled[currentQuestionIndex];
   questionBox.innerHTML = currentQuestion.question;
 
   answerBoxes.forEach((box, index) => {
@@ -18,33 +21,41 @@ function loadQuestion() {
   });
 }
 
-// Funkcja do sprawdzania odpowiedzi
 function selectAnswer(selectedAnswer) {
-  const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+  const currentQuestion = questionsShuffled[currentQuestionIndex];
+  const correctAnswer = currentQuestion.correctAnswer;
 
   if (selectedAnswer === correctAnswer) {
     score++;
-    alert("✅ Dobra odpowiedź!");
+    scoreBox.innerHTML = `<b>Wynik: ${score}</b>`;
+    showTemporaryMessage("✅ Dobra odpowiedź!");
   } else {
-    alert(`❌ Zła odpowiedź! Prawidłowa to: ${correctAnswer}`);
-  }
-
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < questions.length) {
-    loadQuestion();
-  } else {
-    showResult();
+    showTemporaryMessage(`❌ Zła odpowiedź! Poprawna: ${correctAnswer}`);
   }
 }
 
-// Funkcja na koniec quizu
+function showTemporaryMessage(message) {
+  questionBox.innerHTML = message;
+
+  answerBoxes.forEach((box) => (box.onclick = null));
+
+  setTimeout(() => {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questionsShuffled.length) {
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  }, 1000);
+}
+
 function showResult() {
-  questionBox.innerHTML = `Koniec quizu! Twój wynik: ${score} / ${questions.length}`;
+  questionBox.innerHTML = `🎉 Koniec quizu! Twój wynik: ${score} / ${questionsShuffled.length}`;
   answerBoxes.forEach((box) => {
     box.style.display = "none";
   });
 }
 
-// Start gry
+shuffleQuestions();
 loadQuestion();
