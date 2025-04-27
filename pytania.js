@@ -274,4 +274,122 @@ const questions = [
     ],
     correctAnswer: "Wypuścić natychmiast",
   },
+  {
+    question: "Jakie dokumenty powinien posiadać wędkarz podczas połowu?",
+    options: [
+      "Tylko karta wędkarska",
+      "Karta wędkarska i zezwolenie na połów",
+      "Karta wędkarska, zezwolenie na połów i dowód osobisty",
+    ],
+    correctAnswer: "Karta wędkarska i zezwolenie na połów",
+  },
+  {
+    question: "W jakim okresie obowiązuje zakaz połowu pstrąga potokowego?",
+    options: [
+      "Od 1 października do 28 lutego",
+      "Od 1 listopada do 31 marca",
+      "Od 1 stycznia do 30 kwietnia",
+    ],
+    correctAnswer: "Od 1 października do 28 lutego",
+  },
+  {
+    question: "Czy wędkarz może łowić ryby w nocy bez specjalnego zezwolenia?",
+    options: [
+      "Tak, zawsze",
+      "Nie, jest to zabronione",
+      "Tylko na wodach specjalnych",
+    ],
+    correctAnswer: "Tylko na wodach specjalnych",
+  },
+  {
+    question:
+      "Czy wędkarz ma obowiązek przechowywać złowione ryby w odpowiednich warunkach?",
+    options: ["Tak, zawsze", "Nie", "Tylko w przypadku ryb chronionych"],
+    correctAnswer: "Tak, zawsze",
+  },
+  {
+    question: "Jaki jest okres ochronny węgorza?",
+    options: [
+      "Od 1 marca do 31 maja",
+      "Od 1 stycznia do 30 kwietnia",
+      "Od 1 września do 28 lutego",
+    ],
+    correctAnswer: "Od 1 stycznia do 30 kwietnia",
+  },
+  {
+    question:
+      "Czy wędkarz może łowić ryby przy użyciu przynęt naturalnych i sztucznych jednocześnie?",
+    options: [
+      "Tak, bez żadnych ograniczeń",
+      "Nie, to jest zabronione",
+      "Tylko w określonych wodach",
+    ],
+    correctAnswer: "Nie, to jest zabronione",
+  },
+  {
+    question: "W jakim okresie obowiązuje zakaz połowu szczupaka w rzekach?",
+    options: [
+      "Od 1 stycznia do 30 kwietnia",
+      "Od 1 marca do 30 kwietnia",
+      "Od 1 kwietnia do 31 maja",
+    ],
+    correctAnswer: "Od 1 stycznia do 30 kwietnia",
+  },
+  {
+    question: "Czy wędkarz może korzystać z sieci rybackich podczas połowów?",
+    options: [
+      "Tak, z odpowiednim pozwoleniem",
+      "Nie",
+      "Tak, ale tylko w wodach morskich",
+    ],
+    correctAnswer: "Nie",
+  },
+  {
+    question:
+      "Czy wędkarz ma obowiązek wypuszczenia ryby, która jest pod ochroną, nawet jeśli jest większa niż minimalny wymiar ochronny?",
+    options: ["Tak, zawsze", "Nie", "Tylko w przypadku gatunków chronionych"],
+    correctAnswer: "Tak, zawsze",
+  },
+  {
+    question: "W jakim okresie obowiązuje zakaz połowu sandacza?",
+    options: [
+      "Od 1 stycznia do 30 czerwca",
+      "Od 1 kwietnia do 31 maja",
+      "Od 1 sierpnia do 30 września",
+    ],
+    correctAnswer: "Od 1 kwietnia do 31 maja",
+  },
+  {
+    question: "Czy wędkarz może wędkować na jeziorze z użyciem łodzi?",
+    options: [
+      "Tak, zawsze",
+      "Nie, tylko na rzekach",
+      "Tak, ale tylko na wodach specjalnych",
+    ],
+    correctAnswer: "Tak, zawsze",
+  },
+  {
+    question: "Czy wędkarz ma obowiązek dokumentowania złowionych ryb?",
+    options: [
+      "Tak, w każdym przypadku",
+      "Nie, tylko w przypadku ryb chronionych",
+      "Tak, ale tylko w przypadku dużych ryb",
+    ],
+    correctAnswer: "Tak, w każdym przypadku",
+  },
+  {
+    question: "Czy wędkarz może łowić ryby w rezerwatach przyrody?",
+    options: [
+      "Tak, z pozwoleniem",
+      "Nie, w ogóle nie można",
+      "Tak, ale tylko na specjalnych wodach",
+    ],
+    correctAnswer: "Tak, z pozwoleniem",
+  },
+  {
+    question:
+      "Jakie jest maksymalne dopuszczalne stężenie azotanów w wodach przeznaczonych do połowu ryb?",
+    options: ["5 mg/l", "10 mg/l", "15 mg/l"],
+    correctAnswer: "10 mg/l",
+  },
 ];
