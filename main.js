@@ -40,10 +40,12 @@ function showTemporaryMessage(message, isCorrect) {
 function selectAnswer(selectedAnswer) {
   const currentQuestion = questionsShuffled[currentQuestionIndex];
   const correctAnswer = currentQuestion.correctAnswer;
+  let foo = 0;
 
   if (selectedAnswer === correctAnswer) {
+    foo++;
     score++;
-    scoreBox.innerHTML = `<b>Wynik: ${score} / ${questions.length}</b>`;
+    scoreBox.innerHTML = `<b>Wynik: ${score} / ${questions.length} Pozostało : ${questions.length - foo}</b>`;
     showTemporaryMessage("✅ Dobra odpowiedź!", true);
   } else {
     showTemporaryMessage(`❌ Zła odpowiedź! Poprawna: ${correctAnswer}`, false);
